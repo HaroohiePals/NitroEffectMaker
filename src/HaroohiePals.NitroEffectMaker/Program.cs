@@ -14,12 +14,17 @@ static class Program
             .ConfigureServices((_, services) =>
             {
                 services.AddSingleton<IModalService, ModalService>();
+                services.AddSingleton<ViewFactory>();
+                
                 services.AddSingleton<MainWindowManager>();
                 services.AddSingleton<MainWindowViewModel>();
                 services.AddSingleton<MainWindow>();
             }).Build();
 
-        var app = host.Services.GetRequiredService<MainWindow>();
-        app.Run();
+        var mainWindow = host.Services.GetRequiredService<MainWindow>();
+        var mainWindowManager = host.Services.GetRequiredService<MainWindowManager>();
+        
+        mainWindowManager.SetMainWindow(mainWindow);
+        mainWindow.Run();
     }
 }

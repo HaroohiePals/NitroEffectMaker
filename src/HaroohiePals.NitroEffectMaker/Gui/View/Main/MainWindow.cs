@@ -31,7 +31,7 @@ class MainWindow : ImGuiViewWindow
                 Items =
                 [
                     new("New"),
-                    new("Open")
+                    new("Open", _viewModel.OpenParticleArchive)
                 ]
             },
             new("Edit"),
