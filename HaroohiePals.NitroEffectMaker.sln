@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaroohiePals.NitroEffectMaker", "HaroohiePals.NitroEffectMaker\HaroohiePals.NitroEffectMaker.csproj", "{8CFB9675-C840-4DC8-9FFE-7EF4ADC12D07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaroohiePals.NitroEffectMaker", "src\HaroohiePals.NitroEffectMaker\HaroohiePals.NitroEffectMaker.csproj", "{8CFB9675-C840-4DC8-9FFE-7EF4ADC12D07}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Submodules", "Submodules", "{3D92DCAB-7AB5-417C-9F57-0F828B9891F0}"
 EndProject
