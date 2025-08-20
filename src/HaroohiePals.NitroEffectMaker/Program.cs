@@ -1,5 +1,7 @@
 ﻿using HaroohiePals.Gui.View.Modal;
+using HaroohiePals.NitroEffectMaker.Application;
 using HaroohiePals.NitroEffectMaker.Gui.View.Main;
+using HaroohiePals.NitroEffectMaker.Gui.View.Shared;
 using HaroohiePals.NitroEffectMaker.Gui.ViewModel.Main;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -19,6 +21,8 @@ static class Program
                 services.AddSingleton<MainWindowManager>();
                 services.AddSingleton<MainWindowViewModel>();
                 services.AddSingleton<MainWindow>();
+
+                services.AddSingleton<ParticleEditorContextService>();
             }).Build();
 
         var mainWindow = host.Services.GetRequiredService<MainWindow>();

@@ -10,10 +10,12 @@
     <ItemGroup>
       <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.8" />
       <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.8" />
+      <PackageReference Include="NativeFileDialogs.Net" Version="1.2.1" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\..\MarioKartToolbox\src\HaroohiePals.Gui\HaroohiePals.Gui.csproj" />
+      <ProjectReference Include="..\..\MarioKartToolbox\src\HaroohiePals.Nitro.JNLib.Spl\HaroohiePals.Nitro.JNLib.Spl.csproj" />
     </ItemGroup>
 
 </Project>
