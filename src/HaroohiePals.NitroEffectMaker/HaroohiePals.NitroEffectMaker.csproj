@@ -8,7 +8,12 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Gui\" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.8" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.8" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\MarioKartToolbox\src\HaroohiePals.Gui\HaroohiePals.Gui.csproj" />
     </ItemGroup>
 
 </Project>
