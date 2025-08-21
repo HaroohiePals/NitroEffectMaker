@@ -10,5 +10,8 @@ class ViewFactory(IModalService modalService, ParticleEditorContextService parti
         =>  new ParticleEditorContentView(this, particleEditorContextService);
 
     public EmitterListPaneView CreateEmitterListPaneView()
-        => new EmitterListPaneView(modalService, particleEditorContextService);
+        => new EmitterListPaneView(particleEditorContextService);
+    
+    public TextureListPaneView CreateTextureListPaneView()
+        => new TextureListPaneView(particleEditorContextService);
 }

@@ -7,6 +7,7 @@ public class ParticleEditorContext
 {
     private static readonly string sTemporaryIspaPath = Path.Combine("temp", "ispa");
     public string ParticleArchivePath { get; private set; }
+    public string RootPath { get; private set; }
     public IntermediateParticleArchive ParticleArchive { get; private set; }
     public ActionStack ActionStack { get; } = new();
     
@@ -25,6 +26,7 @@ public class ParticleEditorContext
         {
             case ".ispa":
                 ParticleArchive = IntermediateParticleArchive.FromXml(File.ReadAllBytes(particleArchivePath));
+                RootPath = fileInfo.DirectoryName!;
                 break;
             default:
                 if (Directory.Exists(sTemporaryIspaPath))
@@ -36,6 +38,7 @@ public class ParticleEditorContext
                 var factory = new IntermediateParticleArchiveFactory();
                 
                 ParticleArchive = factory.CreateAsync(splArchive, sTemporaryIspaPath).GetAwaiter().GetResult();
+                RootPath = sTemporaryIspaPath;
                 break;
         }
     }

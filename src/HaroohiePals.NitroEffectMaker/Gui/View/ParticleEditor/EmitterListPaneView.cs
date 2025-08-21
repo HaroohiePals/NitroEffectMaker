@@ -5,7 +5,7 @@ using ImGuiNET;
 
 namespace HaroohiePals.NitroEffectMaker.Gui.View.ParticleEditor;
 
-class EmitterListPaneView(IModalService modalService, ParticleEditorContextService particleEditorContextService)
+class EmitterListPaneView(ParticleEditorContextService particleEditorContextService)
     : PaneView("Emitters")
 {
     private int _currentItem = 0;
@@ -16,8 +16,15 @@ class EmitterListPaneView(IModalService modalService, ParticleEditorContextServi
 
         if (particleArchive is null)
             return;
+
+        if (!ImGui.BeginListBox("##EmitterList", ImGui.GetContentRegionAvail())) 
+            return;
         
-        string[] emitters = particleArchive.Emitters.ToArray();
-        ImGui.ListBox("##Emitters", ref _currentItem, emitters, emitters.Length);
+        foreach (var emitter in particleArchive.Emitters)
+        {
+            ImGui.Selectable(emitter ?? "(No Name)");
+        }
+
+        ImGui.EndListBox();
     }
 }
