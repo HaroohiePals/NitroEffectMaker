@@ -1,13 +1,7 @@
 using HaroohiePals.Gui.View;
-￼￼Scegli fileNessun file selezionato
-Message #hacking_and_development
-
 using HaroohiePals.Gui.View.Menu;
 using HaroohiePals.NitroEffectMaker.Application;
-using HaroohiePals.NitroEffectMaker.Gui.View.Main;
 using HaroohiePals.NitroEffectMaker.Gui.View.Shared;
-using ImGuiNET;
-using OpenTK.Graphics.OpenGL4;
 
 namespace HaroohiePals.NitroEffectMaker.Gui.View.ParticleEditor;
 
